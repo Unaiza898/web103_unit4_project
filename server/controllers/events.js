@@ -60,7 +60,7 @@ const getRoof= async (req, res) => {
 const getCarById = async (req, res) => {
   try {
     const eventId = req.params.eventId
-    const selectQuery = `SELECT exterior, roof, price FROM car WHERE id = ${id}`
+    const selectQuery = `SELECT exterior, roof, price FROM car WHERE id = ${eventId}`
     const results = await pool.query(selectQuery)
 
     res.status(200).json(results.rows[0])

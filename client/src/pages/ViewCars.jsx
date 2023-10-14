@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import * as CarAPI from "../services/CarAPI";
 import '../App.css'
-
+import { useParams } from 'react-router-dom'
 const ViewCars = () => {
 
-
+    const { id } = useParams()
     const[cars, setCars] = useState([])
 
     useEffect(() => {

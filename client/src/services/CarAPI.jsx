@@ -26,7 +26,7 @@ export const getAllColors= async () => {
 
     export const getAllcar = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/car/${id}`)
+            const response = await fetch(`http://localhost:3000/api/car`)
             const data = await response.json()
             return data;
         } catch (error) {
@@ -39,7 +39,7 @@ export const getAllColors= async () => {
 
     export const getcarbyid = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/car`)
+            const response = await fetch(`http://localhost:3000/api/car/${id}`)
             const data = await response.json()
             return data;
         } catch (error) {
